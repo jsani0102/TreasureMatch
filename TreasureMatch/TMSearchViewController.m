@@ -23,7 +23,14 @@
         NSArray *searchTags = [self createSearchTagsArray];
         
         PFQuery *query = [PFQuery queryWithClassName:@"Items"];
+        
+        for (NSString *tag in searchTags)
+        {
+            [query whereKey:@"tags" equalTo:tag];
+        }
+        
         [query orderByDescending:@"createdAt"];
+        
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (error)
             {
@@ -33,7 +40,7 @@
             {
                 // We found items!
                 self.items = objects;
-                NSLog(@"Retrieved %ul messages", [self.items count]);
+                NSLog(@"Retrieved %d items", [self.items count]);
             }
         }];
 
