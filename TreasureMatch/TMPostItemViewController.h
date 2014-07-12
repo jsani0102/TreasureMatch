@@ -12,6 +12,14 @@
 
 @property (strong, nonatomic) UIImagePickerController *imagePicker;
 @property (strong, nonatomic) UIImage *image;
+@property (weak, nonatomic) IBOutlet UITextField *addressField;
+@property (weak, nonatomic) IBOutlet UITextField *detailsField;
+@property (weak, nonatomic) IBOutlet UITextField *firstTagField;
+@property (weak, nonatomic) IBOutlet UITextField *secondTagField;
+@property (weak, nonatomic) IBOutlet UITextField *thirdTagField;
+@property (weak, nonatomic) IBOutlet UITextField *lengthField;
+@property (weak, nonatomic) IBOutlet UITextField *widthField;
+@property (weak, nonatomic) IBOutlet UITextField *heightField;
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)postItem:(id)sender;

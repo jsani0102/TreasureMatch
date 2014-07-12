@@ -9,6 +9,7 @@
 #import "TMPostItemViewController.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <Parse/Parse.h>
+#import "TMValidationHelper.h"
 
 @implementation TMPostItemViewController
 
@@ -76,22 +77,29 @@
 
 - (IBAction)postItem:(id)sender
 {
+    
     if (self.image == nil)
     {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Try again!" message:@"Please capture a photo or video to share!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
         [self presentViewController:self.imagePicker animated:NO completion:nil];
     }
+    else if ([TMValidationHelper validateTextFields:@[self.addressField, self.detailsField, self.firstTagField, self.secondTagField, self.thirdTagField]])
+    {
+        [self uploadItem];
+        [self.navigationController popViewControllerAnimated:YES];
+        
+    }
     else
     {
-        [self uploadMessage];
-        [self.navigationController popViewControllerAnimated:YES];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Try again!" message:@"You must fill out all required fields!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
     }
 }
 
 #pragma mark - Helper methods
 
-- (void)uploadMessage
+- (void)uploadItem
 {
     NSData *fileData;
     NSString *fileName;
@@ -118,12 +126,21 @@
             }
             else
             {
-                PFObject *message = [PFObject objectWithClassName:@"Items"];
-                [message setObject:file forKey:@"file"];
-                [message setObject:fileType forKey:@"fileType"];
-                [message setObject:[[PFUser currentUser] objectId] forKey:@"senderId"];
-                [message setObject:[[PFUser currentUser] username] forKey:@"senderName"];
-                [message saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                PFObject *item = [PFObject objectWithClassName:@"Items"];
+                [item setObject:file forKey:@"file"];
+                [item setObject:fileType forKey:@"fileType"];
+                [item setObject:[[PFUser currentUser] objectId] forKey:@"senderId"];
+                [item setObject:[[PFUser currentUser] username] forKey:@"senderName"];
+                
+                NSArray *tags = @[self.firstTagField.text, self.secondTagField.text, self.thirdTagField.text];
+                [item setObject:tags forKey:@"tags"];
+                [item setObject:self.addressField.text forKey:@"address"];
+                [item setObject:self.detailsField.text forKey:@"details"];
+                [item setObject:self.lengthField.text forKey:@"length"];
+                [item setObject:self.widthField.text forKey:@"width"];
+                [item setObject:self.heightField.text forKey:@"height"];
+                
+                [item saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     if (error)
                     {
                         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"An error occurred!" message:@"Please try uploading your image again" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];

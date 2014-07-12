@@ -59,6 +59,8 @@
 {
     if ([PFUser currentUser])
     {
+        self.postItemButton.hidden = NO;
+        self.searchForItemButton.hidden = NO;
         [self.accountButton setTitle:@"Manage Your Account" forState:UIControlStateNormal];
         self.logoutButton.style = UIBarButtonItemStyleBordered;
         self.logoutButton.enabled = YES;
@@ -66,6 +68,8 @@
     }
     else
     {
+        self.postItemButton.hidden = YES;
+        self.searchForItemButton.hidden = YES;
         [self.accountButton setTitle:@"Login" forState:UIControlStateNormal];
         self.logoutButton.style = UIBarButtonItemStylePlain;
         self.logoutButton.enabled = NO;

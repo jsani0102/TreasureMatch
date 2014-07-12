@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOT-js-oM1">
-                                <rect key="frame" x="105" y="155" width="110" height="30"/>
+                                <rect key="frame" x="105" y="223" width="110" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Search For Item">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to TreasureMatch!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfk-sF-9pB">
-                                <rect key="frame" x="54" y="67" width="213" height="21"/>
+                                <rect key="frame" x="54" y="114" width="213" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocP-aM-66h">
-                                <rect key="frame" x="127" y="117" width="66" height="30"/>
+                                <rect key="frame" x="127" y="169" width="66" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Post Item">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -66,6 +66,8 @@
                     <connections>
                         <outlet property="accountButton" destination="2bL-LB-quv" id="sZH-Rw-eoG"/>
                         <outlet property="logoutButton" destination="57D-YS-yqO" id="zlG-Fg-Uau"/>
+                        <outlet property="postItemButton" destination="ocP-aM-66h" id="yNq-tu-WmC"/>
+                        <outlet property="searchForItemButton" destination="dOT-js-oM1" id="Xk4-od-56U"/>
                         <segue destination="Xc4-ee-p6D" kind="push" identifier="showLogin" id="SJ0-FU-4p5"/>
                         <segue destination="PZJ-bd-1bx" kind="push" identifier="showAccount" id="1q1-53-1NV"/>
                     </connections>
@@ -146,6 +148,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VnB-f6-Hhj">
+                                <rect key="frame" x="126" y="294" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Post Item">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postItem:" destination="WP7-wN-TBt" eventType="touchUpInside" id="4yp-Rd-iA0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -155,12 +167,17 @@
                                 <action selector="cancel:" destination="WP7-wN-TBt" id="Z6a-cR-weJ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Post" id="nXC-Tl-jsO">
-                            <connections>
-                                <action selector="postItem:" destination="WP7-wN-TBt" id="5bd-RS-NGZ"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addressField" destination="fb3-Be-CLY" id="GH9-B3-JQK"/>
+                        <outlet property="detailsField" destination="Bol-v4-ywo" id="uvT-Bn-ejN"/>
+                        <outlet property="firstTagField" destination="ume-YC-cjU" id="xMP-vK-vfd"/>
+                        <outlet property="heightField" destination="Dvh-GO-bT7" id="wXN-TP-gtk"/>
+                        <outlet property="lengthField" destination="HsX-aL-GPe" id="cPM-oM-yzZ"/>
+                        <outlet property="secondTagField" destination="yII-Qf-RFT" id="L4J-8H-1Bd"/>
+                        <outlet property="thirdTagField" destination="2Zb-zU-vgy" id="iaX-6Z-LGS"/>
+                        <outlet property="widthField" destination="Tuj-uH-0Ja" id="heC-Q0-Zhe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EY1-oi-U7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
