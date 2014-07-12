@@ -36,6 +36,7 @@
 		549D0FD519718EEC006C5379 /* TMPostItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D0FD419718EEC006C5379 /* TMPostItemViewController.m */; };
 		549D0FD81971A1D2006C5379 /* TMValidationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D0FD71971A1D2006C5379 /* TMValidationHelper.m */; };
 		549D0FDB1971A59B006C5379 /* TMAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D0FDA1971A59B006C5379 /* TMAccountViewController.m */; };
+		549D0FDE1971A96A006C5379 /* TMSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D0FDD1971A96A006C5379 /* TMSearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,8 @@
 		549D0FD71971A1D2006C5379 /* TMValidationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMValidationHelper.m; sourceTree = "<group>"; };
 		549D0FD91971A59B006C5379 /* TMAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMAccountViewController.h; sourceTree = "<group>"; };
 		549D0FDA1971A59B006C5379 /* TMAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMAccountViewController.m; sourceTree = "<group>"; };
+		549D0FDC1971A96A006C5379 /* TMSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSearchViewController.h; sourceTree = "<group>"; };
+		549D0FDD1971A96A006C5379 /* TMSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +183,8 @@
 				549D0F8919717617006C5379 /* TMAppDelegate.h */,
 				549D0F8A19717617006C5379 /* TMAppDelegate.m */,
 				549D0F8C19717617006C5379 /* Main.storyboard */,
+				549D0FDC1971A96A006C5379 /* TMSearchViewController.h */,
+				549D0FDD1971A96A006C5379 /* TMSearchViewController.m */,
 				549D0FD91971A59B006C5379 /* TMAccountViewController.h */,
 				549D0FDA1971A59B006C5379 /* TMAccountViewController.m */,
 				549D0FD319718EEC006C5379 /* TMPostItemViewController.h */,
@@ -325,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				549D0FDE1971A96A006C5379 /* TMSearchViewController.m in Sources */,
 				549D0F9119717617006C5379 /* TMViewController.m in Sources */,
 				549D0FDB1971A59B006C5379 /* TMAccountViewController.m in Sources */,
 				549D0FD219717C30006C5379 /* TMSignupViewController.m in Sources */,
