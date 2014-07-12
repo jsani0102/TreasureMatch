@@ -8,6 +8,7 @@
 
 #import "TMSearchViewController.h"
 #import <Parse/Parse.h>
+#import "TMTinderViewController.h"
 
 @implementation TMSearchViewController
 
@@ -15,7 +16,7 @@
 {
     if ([self.firstSearchTag.text length] == 0)
     {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry!" message:@"You must" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry!" message:@"You must provide at least one tag" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
     }
     else
@@ -40,10 +41,20 @@
             {
                 // We found items!
                 self.items = objects;
-                NSLog(@"Retrieved %d items", [self.items count]);
+                NSLog(@"%@", self.items);
+                [self performSegueWithIdentifier:@"showSearchResults" sender:self];
             }
         }];
+    }
+}
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"showSearchResults"])
+    {
+        TMTinderViewController *tinderViewController = (TMTinderViewController *)segue.destinationViewController;
+        tinderViewController.items = self.items.mutableCopy;
+        NSLog(@"%@", self.items);
     }
 }
 

@@ -23,7 +23,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="of9-1P-ZCs" kind="push" id="6Lw-0I-bHu"/>
+                                    <segue destination="of9-1P-ZCs" kind="push" id="rsb-WA-KVx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to TreasureMatch!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfk-sF-9pB">
@@ -227,7 +227,6 @@
                                 </state>
                                 <connections>
                                     <action selector="searchForItems:" destination="of9-1P-ZCs" eventType="touchUpInside" id="ccc-Fe-k4L"/>
-                                    <segue destination="Txj-dQ-yDV" kind="push" id="2a9-mG-TkW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -238,16 +237,17 @@
                         <outlet property="firstSearchTag" destination="e74-dC-PcU" id="X9i-IP-znc"/>
                         <outlet property="secondSearchTag" destination="F0l-JZ-pnI" id="JBA-wq-Kyx"/>
                         <outlet property="thirdSearchTag" destination="VFO-7k-eSG" id="T9S-KU-IBT"/>
+                        <segue destination="Txj-dQ-yDV" kind="push" identifier="showSearchResults" id="fz5-t9-iNO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bT-c1-1uz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="680" y="-285"/>
         </scene>
-        <!--View Controller-->
+        <!--Tinder View Controller-->
         <scene sceneID="4Z8-XA-6D6">
             <objects>
-                <viewController id="Txj-dQ-yDV" sceneMemberID="viewController">
+                <viewController id="Txj-dQ-yDV" customClass="TMTinderViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kkg-d5-Kuh"/>
                         <viewControllerLayoutGuide type="bottom" id="HHH-PV-hHa"/>
@@ -262,16 +262,39 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance: 0.5 mi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psB-Hx-c57">
-                                <rect key="frame" x="188" y="83" width="124" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.5 mi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psB-Hx-c57">
+                                <rect key="frame" x="252" y="83" width="48" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ncx-wm-8E8">
+                                <rect key="frame" x="206" y="477" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="YES">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4z-PN-la2">
+                                <rect key="frame" x="88" y="477" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="NO">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yty-7d-BYJ">
+                                <rect key="frame" x="60" y="150" width="200" height="260"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="eAR-1z-Icl"/>
+                    <connections>
+                        <outlet property="imageView" destination="yty-7d-BYJ" id="vQv-pP-HRp"/>
+                        <outlet property="noButton" destination="w4z-PN-la2" id="3XS-ly-s5O"/>
+                        <outlet property="yesButton" destination="Ncx-wm-8E8" id="gHB-EF-8V3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szb-JZ-2sh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

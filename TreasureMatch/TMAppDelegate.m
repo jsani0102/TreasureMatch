@@ -8,6 +8,7 @@
 
 #import "TMAppDelegate.h"
 #import <Parse/Parse.h>
+#import "TMTinderViewController.h"
 
 @implementation TMAppDelegate
 
@@ -17,10 +18,10 @@
                   clientKey:@"ruooAv41mL4JEchgWuvXt1wgxfWyJYfBMeOVsf6w"];
     
     [NSThread sleepForTimeInterval:1.0]; // let launch image show for extended time
-    
+
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
