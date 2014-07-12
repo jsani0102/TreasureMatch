@@ -13,4 +13,7 @@
 @property (strong, nonatomic) UIImagePickerController *imagePicker;
 @property (strong, nonatomic) UIImage *image;
 
+- (IBAction)cancel:(id)sender;
+- (IBAction)postItem:(id)sender;
+
 @end
