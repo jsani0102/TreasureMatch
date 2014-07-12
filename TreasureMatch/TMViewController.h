@@ -10,4 +10,9 @@
 
 @interface TMViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *accountButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *logoutButton;
+
+- (IBAction)logout:(id)sender;
+
 @end
