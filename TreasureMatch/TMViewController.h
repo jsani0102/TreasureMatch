@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *logoutButton;
 
 - (IBAction)logout:(id)sender;
+- (IBAction)hitAccountButton:(id)sender;
 
 @end

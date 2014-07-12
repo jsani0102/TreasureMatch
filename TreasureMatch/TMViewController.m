@@ -43,11 +43,23 @@
     [self setUpUI];
 }
 
+- (IBAction)hitAccountButton:(id)sender
+{
+    if ([PFUser currentUser])
+    {
+        [self performSegueWithIdentifier:@"showAccount" sender:self];
+    }
+    else
+    {
+        [self performSegueWithIdentifier:@"showLogin" sender:self];
+    }
+}
+
 - (void)setUpUI
 {
     if ([PFUser currentUser])
     {
-        [self.accountButton setTitle:@"Account" forState:UIControlStateNormal];
+        [self.accountButton setTitle:@"Manage Your Account" forState:UIControlStateNormal];
         self.logoutButton.style = UIBarButtonItemStyleBordered;
         self.logoutButton.enabled = YES;
         self.logoutButton.title = @"Logout";

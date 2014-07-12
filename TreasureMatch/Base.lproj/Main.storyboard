@@ -37,7 +37,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Xc4-ee-p6D" kind="push" id="Hcf-ta-jpX"/>
+                                    <action selector="hitAccountButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="l9Y-2u-iNZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -53,11 +53,32 @@
                     <connections>
                         <outlet property="accountButton" destination="2bL-LB-quv" id="sZH-Rw-eoG"/>
                         <outlet property="logoutButton" destination="57D-YS-yqO" id="zlG-Fg-Uau"/>
+                        <segue destination="Xc4-ee-p6D" kind="push" identifier="showLogin" id="SJ0-FU-4p5"/>
+                        <segue destination="PZJ-bd-1bx" kind="push" identifier="showAccount" id="1q1-53-1NV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="153" y="95"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BIK-wS-2Ny">
+            <objects>
+                <viewController id="PZJ-bd-1bx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S8W-YU-Vup"/>
+                        <viewControllerLayoutGuide type="bottom" id="NRa-hz-Sqg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yle-JF-94p">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="f25-QP-QhG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bAV-wE-N7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="669" y="1078"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="k4b-fk-1YV">
