@@ -40,6 +40,8 @@
 		549D0FE11971B1FF006C5379 /* TMTinderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D0FE01971B1FF006C5379 /* TMTinderViewController.m */; };
 		549D0FE41971B23B006C5379 /* TMTinderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D0FE31971B23B006C5379 /* TMTinderView.m */; };
 		549D0FE71971B25E006C5379 /* TMDraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D0FE61971B25E006C5379 /* TMDraggableView.m */; };
+		549D0FEB1971C765006C5379 /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 549D0FEA1971C765006C5379 /* AppIcon60x60@2x.png */; };
+		549D0FED1971C969006C5379 /* Couch.png in Resources */ = {isa = PBXBuildFile; fileRef = 549D0FEC1971C969006C5379 /* Couch.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		549D0FE31971B23B006C5379 /* TMTinderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTinderView.m; sourceTree = "<group>"; };
 		549D0FE51971B25E006C5379 /* TMDraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDraggableView.h; sourceTree = "<group>"; };
 		549D0FE61971B25E006C5379 /* TMDraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDraggableView.m; sourceTree = "<group>"; };
+		549D0FEA1971C765006C5379 /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon60x60@2x.png"; path = "Images.xcassets/AppIcon.appiconset/AppIcon60x60@2x.png"; sourceTree = "<group>"; };
+		549D0FEC1971C969006C5379 /* Couch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Couch.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +193,8 @@
 		549D0F8019717617006C5379 /* TreasureMatch */ = {
 			isa = PBXGroup;
 			children = (
+				549D0FEA1971C765006C5379 /* AppIcon60x60@2x.png */,
+				549D0FEC1971C969006C5379 /* Couch.png */,
 				549D0F8919717617006C5379 /* TMAppDelegate.h */,
 				549D0F8A19717617006C5379 /* TMAppDelegate.m */,
 				549D0F8C19717617006C5379 /* Main.storyboard */,
@@ -326,7 +332,9 @@
 			files = (
 				549D0F9319717617006C5379 /* Images.xcassets in Resources */,
 				549D0F8519717617006C5379 /* InfoPlist.strings in Resources */,
+				549D0FEB1971C765006C5379 /* AppIcon60x60@2x.png in Resources */,
 				549D0F8E19717617006C5379 /* Main.storyboard in Resources */,
+				549D0FED1971C969006C5379 /* Couch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

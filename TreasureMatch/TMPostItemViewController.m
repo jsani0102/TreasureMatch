@@ -84,7 +84,7 @@
         [alertView show];
         [self presentViewController:self.imagePicker animated:NO completion:nil];
     }
-    else if ([TMValidationHelper validateTextFields:@[self.addressField, self.detailsField, self.firstTagField, self.secondTagField, self.thirdTagField]])
+    else if ([TMValidationHelper validateTextFields:@[/*self.addressField, self.detailsField,*/self.firstTagField, self.secondTagField, self.thirdTagField]])
     {
         [self uploadItem];
         [self.navigationController popViewControllerAnimated:YES];
@@ -150,6 +150,8 @@
                     {
                         // Everything was successful!
                         self.image = nil;
+                        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"Your item was uploaded successfully" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                        [alertView show];
                     }
                 }];
             }
