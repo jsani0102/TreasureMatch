@@ -16,6 +16,8 @@
     [Parse setApplicationId:@"Ss5jY4jngmJR5JwoGpRJqv4DIbXaBkiCALwmd8kd"
                   clientKey:@"ruooAv41mL4JEchgWuvXt1wgxfWyJYfBMeOVsf6w"];
     
+    [NSThread sleepForTimeInterval:1.0]; // let launch image show for extended time
+    
     return YES;
 }
 							
