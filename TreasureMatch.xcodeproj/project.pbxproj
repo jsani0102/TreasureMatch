@@ -33,6 +33,7 @@
 		549D0FCC197179E2006C5379 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 549D0FCB197179E2006C5379 /* libz.dylib */; };
 		549D0FCF19717C13006C5379 /* TMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D0FCE19717C13006C5379 /* TMLoginViewController.m */; };
 		549D0FD219717C30006C5379 /* TMSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D0FD119717C30006C5379 /* TMSignupViewController.m */; };
+		549D0FD519718EEC006C5379 /* TMPostItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 549D0FD419718EEC006C5379 /* TMPostItemViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,8 @@
 		549D0FCE19717C13006C5379 /* TMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMLoginViewController.m; sourceTree = "<group>"; };
 		549D0FD019717C30006C5379 /* TMSignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSignupViewController.h; sourceTree = "<group>"; };
 		549D0FD119717C30006C5379 /* TMSignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSignupViewController.m; sourceTree = "<group>"; };
+		549D0FD319718EEC006C5379 /* TMPostItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMPostItemViewController.h; sourceTree = "<group>"; };
+		549D0FD419718EEC006C5379 /* TMPostItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMPostItemViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,8 @@
 				549D0F8919717617006C5379 /* TMAppDelegate.h */,
 				549D0F8A19717617006C5379 /* TMAppDelegate.m */,
 				549D0F8C19717617006C5379 /* Main.storyboard */,
+				549D0FD319718EEC006C5379 /* TMPostItemViewController.h */,
+				549D0FD419718EEC006C5379 /* TMPostItemViewController.m */,
 				549D0FD019717C30006C5379 /* TMSignupViewController.h */,
 				549D0FD119717C30006C5379 /* TMSignupViewController.m */,
 				549D0F8F19717617006C5379 /* TMViewController.h */,
@@ -314,6 +319,7 @@
 				549D0FD219717C30006C5379 /* TMSignupViewController.m in Sources */,
 				549D0F8719717617006C5379 /* main.m in Sources */,
 				549D0F8B19717617006C5379 /* TMAppDelegate.m in Sources */,
+				549D0FD519718EEC006C5379 /* TMPostItemViewController.m in Sources */,
 				549D0FCF19717C13006C5379 /* TMLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
